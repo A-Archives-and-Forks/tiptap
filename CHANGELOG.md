@@ -1,5 +1,1014 @@
 # Releases
 
+## v4.0.0-next.0
+
+### @tiptap/core
+
+#### Patch Changes
+
+- 5f1986a: Nested lists exported to Markdown now keep their hierarchy when the file is read back by other Markdown tools.
+- 5f1986a: Fix a denial-of-service risk where crafted block or inline Markdown attributes could consume excessive CPU and block the browser or server event loop.
+- 5f1986a: Large transactions (for example a big paste with Link autolink enabled) are processed faster.
+- 5f1986a: Prevent extra CSS declarations from being rendered from editor content.
+- 5f1986a: Atom block directives (`:::name {…} :::`) indented by up to 3 spaces are now tokenized, matching CommonMark indentation rules for block constructs.
+- 5f1986a: Fix freezes in framework-based node views on iOS and Android
+- 5f1986a: Bind `parseMarkdown` and `renderMarkdown` to the configured extension so hooks can read `this.options` and `this.name` without an Editor.
+- 5f1986a: Prevent untrusted HTML attributes from changing an object's prototype when merged with `mergeAttributes`.
+- 5f1986a: Stop joinItemForward and joinItemBackward from joining across isolating nodes.
+- Updated dependencies [5f1986a]
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-list
+
+#### Patch Changes
+
+- 5f1986a: Nested lists exported to Markdown now keep their hierarchy when the file is read back by other Markdown tools.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/ai-toolkit
+
+#### Patch Changes
+
+- 5f1986a: The Server AI Toolkit no longer adds `_hash` to inline nodes, including inline Image, Audio, YouTube and Twitch nodes.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-youtube
+
+#### Patch Changes
+
+- 5f1986a: Pasting a YouTube iframe without a `src` attribute no longer crashes the editor. The embed is kept without a source.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/starter-kit
+
+#### Major Changes
+
+- 5f1986a: StarterKit no longer installs the deprecated `@tiptap/extension-dropcursor`, `@tiptap/extension-gapcursor`, `@tiptap/extension-list-item`, and `@tiptap/extension-list-keymap` packages. We will not publish further updates to these packages. StarterKit still includes their extensions, so you do not need to change your configuration.
+  
+  If you import these extensions directly, switch to the new packages: `Dropcursor` and `Gapcursor` from `@tiptap/extensions`, and `ListItem` and `ListKeymap` from `@tiptap/extension-list`.
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/extension-list@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/extension-link@4.0.0-next.0
+  - @tiptap/extension-blockquote@4.0.0-next.0
+  - @tiptap/extension-bold@4.0.0-next.0
+  - @tiptap/extension-code@4.0.0-next.0
+  - @tiptap/extension-code-block@4.0.0-next.0
+  - @tiptap/extension-document@4.0.0-next.0
+  - @tiptap/extension-hard-break@4.0.0-next.0
+  - @tiptap/extension-heading@4.0.0-next.0
+  - @tiptap/extension-horizontal-rule@4.0.0-next.0
+  - @tiptap/extension-italic@4.0.0-next.0
+  - @tiptap/extension-paragraph@4.0.0-next.0
+  - @tiptap/extension-strike@4.0.0-next.0
+  - @tiptap/extension-text@4.0.0-next.0
+  - @tiptap/extension-underline@4.0.0-next.0
+  - @tiptap/extensions@4.0.0-next.0
+  - @tiptap/extension-bullet-list@4.0.0-next.0
+  - @tiptap/extension-ordered-list@4.0.0-next.0
+
+### @tiptap/markdown
+
+#### Patch Changes
+
+- 5f1986a: Fix Markdown serialization of whitespace-only marked text.
+- 5f1986a: Bind `parseMarkdown` and `renderMarkdown` to the configured extension so hooks can read `this.options` and `this.name` without an Editor.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-mention
+
+#### Patch Changes
+
+- 5f1986a: Fix a denial-of-service risk where crafted block or inline Markdown attributes could consume excessive CPU and block the browser or server event loop.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/suggestion@4.0.0-next.0
+
+### @tiptap/extension-collaboration-caret
+
+#### Patch Changes
+
+- 5f1986a: Fixed a bug which allowed potentially unsafe color values being sent by other clients. Those unsafe colors received from collaboration users are now ignored.
+- 5f1986a: Prevent extra CSS declarations from being rendered from editor content.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/react
+
+#### Minor Changes
+
+- 5f1986a: Align `selected` with ProseMirror node selections by default, expose text selections through `selectionInside`, and keep `selectedOnTextSelection` compatible.
+
+#### Patch Changes
+
+- 5f1986a: Reduce overhead in React node views on documents with many nodes.
+- 5f1986a: Fix a TypeScript error (TS2694) in the shipped type declarations when `skipLibCheck` is turned off.
+- 5f1986a: Fix Enter and Shift-Enter inside React node views on iOS and Android.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/pm
+
+#### Patch Changes
+
+- 5f1986a: Bump `prosemirror-view` to `^1.42.3`, which fixes an XSS vulnerability where pasting crafted HTML could run arbitrary JavaScript (GHSA-c8x8-7fp4-3x9w).
+
+### @tiptap/extension-table
+
+#### Patch Changes
+
+- 5f1986a: Right-clicking a cell inside a multi-cell table selection no longer collapses that selection.
+- 5f1986a: Prevent extra CSS declarations from being rendered from editor content.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-highlight
+
+#### Patch Changes
+
+- 5f1986a: Prevent extra CSS declarations from being rendered from editor content.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-text-align
+
+#### Patch Changes
+
+- 5f1986a: Prevent extra CSS declarations from being rendered from editor content.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-text-style
+
+#### Patch Changes
+
+- 5f1986a: Prevent extra CSS declarations from being rendered from editor content.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-link
+
+#### Patch Changes
+
+- 5f1986a: Typing spaces after a link no longer extends the link, including multiple spaces inserted in one transaction. Formatting changes and undo/redo preserve existing linked whitespace.
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/vue
+
+#### Major Changes
+
+- 5f1986a: Vue 2 support is removed. `@tiptap/vue-3` is now `@tiptap/vue`, and `@tiptap/extension-drag-handle-vue-3` is now `@tiptap/extension-drag-handle-vue`.
+  
+  Update imports and dependencies:
+  
+  ```diff
+  - import { EditorContent } from '@tiptap/vue-3'
+  + import { EditorContent } from '@tiptap/vue'
+  
+  - import DragHandle from '@tiptap/extension-drag-handle-vue-3'
+  + import DragHandle from '@tiptap/extension-drag-handle-vue'
+  ```
+  
+  Vue 2 users must migrate to Vue 3 before using the new packages. The planned Codemod Registry package `@tiptap/codemod-v3-to-v4` updates package imports and dependencies.
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-drag-handle-vue
+
+#### Major Changes
+
+- 5f1986a: Vue 2 support is removed. `@tiptap/vue-3` is now `@tiptap/vue`, and `@tiptap/extension-drag-handle-vue-3` is now `@tiptap/extension-drag-handle-vue`.
+  
+  Update imports and dependencies:
+  
+  ```diff
+  - import { EditorContent } from '@tiptap/vue-3'
+  + import { EditorContent } from '@tiptap/vue'
+  
+  - import DragHandle from '@tiptap/extension-drag-handle-vue-3'
+  + import DragHandle from '@tiptap/extension-drag-handle-vue'
+  ```
+  
+  Vue 2 users must migrate to Vue 3 before using the new packages. The planned Codemod Registry package `@tiptap/codemod-v3-to-v4` updates package imports and dependencies.
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/vue@4.0.0-next.0
+  - @tiptap/extension-drag-handle@4.0.0-next.0
+
+### @tiptap/extension-audio
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-blockquote
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-bold
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-bubble-menu
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-code
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-code-block
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-code-block-lowlight
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/extension-code-block@4.0.0-next.0
+
+### @tiptap/extension-collaboration
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-details
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/extension-text-style@4.0.0-next.0
+
+### @tiptap/extension-document
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-drag-handle
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/extension-collaboration@4.0.0-next.0
+  - @tiptap/extension-node-range@4.0.0-next.0
+
+### @tiptap/extension-emoji
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/suggestion@4.0.0-next.0
+
+### @tiptap/extension-file-handler
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/extension-text-style@4.0.0-next.0
+
+### @tiptap/extension-find-and-replace
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-floating-menu
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-hard-break
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-heading
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-horizontal-rule
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-image
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-invisible-characters
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/extension-text-style@4.0.0-next.0
+
+### @tiptap/extension-italic
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-mathematics
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-node-range
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-paragraph
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-ruby-text
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-strike
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-subscript
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-superscript
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-table-of-contents
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-text
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-twitch
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-typography
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-underline
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+
+### @tiptap/extension-unique-id
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extensions
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/html
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/static-renderer
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/suggestion
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/core@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+
+### @tiptap/extension-bullet-list
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+  - @tiptap/extension-list@4.0.0-next.0
+
+### @tiptap/extension-ordered-list
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+  - @tiptap/extension-list@4.0.0-next.0
+
+### @tiptap/extension-drag-handle-react
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+- Updated dependencies [5f1986a]
+  - @tiptap/react@4.0.0-next.0
+  - @tiptap/pm@4.0.0-next.0
+  - @tiptap/extension-drag-handle@4.0.0-next.0
+
+### @tiptap/extension-color
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+  - @tiptap/extension-text-style@4.0.0-next.0
+
+### @tiptap/extension-font-family
+
+#### Patch Changes
+
+- Updated dependencies [5f1986a]
+  - @tiptap/extension-text-style@4.0.0-next.0
+
 ## v3.30.3
 
 ### @tiptap/extension-text-style
